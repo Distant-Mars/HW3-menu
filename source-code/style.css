@@ -1,0 +1,254 @@
+/*----------------初始化字体-------------------
+--------------------------------------------*/
+body{
+	font-family: Arial;
+}
+
+
+/*----------------info样式，居中，margin等的设置，并设为零先隐藏-------------------
+-----------------------------------------------------------------------------------*/
+.info{
+	position: absolute;
+	top: 205px;
+	left:185px;
+	height: 10px;
+	width: 10px;
+	transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	-o-transition:1s;
+}
+.info ul{
+	list-style: none;
+	padding: 0px 0;
+	margin: 0;
+	text-align: center;
+}
+.info img{
+	height: 0px;
+	width: 0px;
+	margin-right: 0px;
+	transition:1s;
+	-moz-transition:1s; /* Firefox 4 */
+	-webkit-transition:1s; /* Safari and Chrome */
+	-o-transition:1s;
+}
+.page{
+	font-size: 0pt;
+	margin-top: 8px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	transition:1s;
+	-moz-transition:1s; /* Firefox 4 */
+	-webkit-transition:1s; /* Safari and Chrome */
+	-o-transition:1s;
+}
+.posted{
+	position: absolute;
+	top: 62%;
+	left:3%;
+	font-size: 0pt;
+	font-weight: bold;
+	transition:0.2s;
+	-moz-transition:0.2s; /* Firefox 4 */
+	-webkit-transition:0.2s; /* Safari and Chrome */
+	-o-transition:0.2s;
+}
+.like{
+	position: absolute;
+	top:62%;
+	left: 50%;
+	font-size: 0pt;
+	font-weight: bold;
+	transition:0.2s;
+	-moz-transition:0.2s; /* Firefox 4 */
+	-webkit-transition:0.2s; /* Safari and Chrome */
+	-o-transition:0.2s;
+}
+.mine span{
+	transition:0.2s;
+	-moz-transition:0.2s; /* Firefox 4 */
+	-webkit-transition:0.2s; /* Safari and Chrome */
+	-o-transition:0.2s;
+}
+
+
+/*----------------周围一圈按钮的样式，设置为0，意味着不可见-------------------
+------------------------------------------------------------------------------*/
+.button{
+	list-style: none;
+	position: absolute;
+	top: 212px;
+	left:197px;
+	height: 0px;
+	width: 0px;
+	transition:1s;
+	-moz-transition:1s; /* Firefox 4 */
+	-webkit-transition:1s; /* Safari and Chrome */
+	-o-transition:1s;
+}
+.unread{
+	position: relative;
+	top: 0px;
+	left:0px;
+	width: 0px;
+	height: 0px;
+	font-size: 0pt;
+	color: white;
+	transition:0.5s;
+	-moz-transition:0.5s; /* Firefox 4 */
+	-webkit-transition:0.5s; /* Safari and Chrome */
+	-o-transition:0.5s;
+}
+.apb{
+	position: absolute;
+	top: 190px;
+	left:175px;
+	height: 44px;
+	width: 44px;
+	border-radius: 22px;
+	-moz-border-radius:22px;
+	-webkit-border-radius:22px;
+	background-color: rgba(48, 63, 159, 1);
+	background-image: url("assets/images/atplus_white.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.5;
+	transition:1s;
+	-moz-transition:1s; /* Firefox 4 */
+	-webkit-transition:1s; /* Safari and Chrome */
+	-o-transition:1s;
+}
+
+
+/*----------------设置打开菜单后的样式变化-------------------
+-------------------------------------------------------------*/
+#button:hover .apb{
+	background-image: url("assets/images/atplus_green.png");
+	opacity: 1;
+	transform:scale(1.5,1.5);
+	-moz-transfrom:scale(1.5,1.5);
+	-webkit-transfrom:scale(1.5,1.5);
+}
+#button:hover .button{
+	background-color: gray;
+	height: 44px;
+	width: 44px;
+	border-radius: 22px;
+	-moz-border-radius:22px;
+	-webkit-border-radius:22px;
+}
+#button:hover .mask{
+	background-image: url("assets/images/mask.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 130px;
+	left:88px;
+}
+#button:hover .history{
+	background-image: url("assets/images/history.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 180px;
+	left:70px;
+}
+#button:hover .message{
+	background-image: url("assets/images/message.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 230px;
+	left:90px;
+}
+#button:hover .unread{
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	top: -5px;
+	left: 29px;
+	height: 24px;
+	width: 24px;
+	background-color: red;
+	color: white;
+	border-radius: 12px;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+}
+#button:hover .setting{
+	background-image: url("assets/images/setting.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 270px;
+	left:130px;
+}
+#button:hover .sign{
+	background-image: url("assets/images/signin.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 265px;
+	left:190px;
+}
+#button:hover .info{
+	position: absolute;
+	top: 0;
+	left: 120px;
+	background-color: gray;
+	width: 160px;
+	height: 160px;
+	border-radius: 80px;
+	-moz-border-radius:80px;
+	-webkit-border-radius:80px;	
+}
+#button:hover .info img{
+	height: 30px;
+	width: 30px;
+	margin-right: 10px;
+}
+#button:hover .user span{
+	font-size: 15pt;
+	vertical-align:top;
+	color: white;
+}
+#button:hover .comment span{
+	font-size: 25pt;
+	vertical-align:top;
+	color: white;
+}
+#button:hover .posted{
+	width: 80px;
+}
+#button:hover .posted span{
+	font-size: 18pt;
+	vertical-align:top;
+	font-weight: bold;
+	color:rgb(33,217,147);
+}
+#button:hover .like{
+	width: 80px;
+}
+#button:hover .like span{
+	font-size: 18pt;
+	vertical-align:top;
+	font-weight: bold;
+	color:rgb(33,217,147);
+}
+
+/*----------------定位整个环形菜单到屏幕正下方-------------------
+-----------------------------------------------------------------*/
+#bottom-positioner{
+	position: relative;
+	padding: 0;
+	height: 350px;
+	width: 400px;
+}
+#at-plus-container{
+	height: 350px;
+	width: 400px;
+	position: fixed;
+	bottom: 0;
+	left:0;
+	right:0;
+	margin-left: auto;
+	margin-right: auto;
+}
