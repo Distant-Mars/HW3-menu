@@ -92,10 +92,10 @@ body{
 	height: 0px;
 	font-size: 0pt;
 	color: white;
-	transition:0.5s;
-	-moz-transition:0.5s; /* Firefox 4 */
-	-webkit-transition:0.5s; /* Safari and Chrome */
-	-o-transition:0.5s;
+	transition:1s;
+	-moz-transition:1s; /* Firefox 4 */
+	-webkit-transition:1s; /* Safari and Chrome */
+	-o-transition:1s;
 }
 .apb{
 	position: absolute;
@@ -111,10 +111,14 @@ body{
 	background-repeat: no-repeat;
 	background-position: center;
 	opacity: 0.5;
-	transition:1.5s;
-	-moz-transition:1.5s; /* Firefox 4 */
-	-webkit-transition:1.5s; /* Safari and Chrome */
-	-o-transition:1.5s;
+	transition:1s;
+	-moz-transition:1s; /* Firefox 4 */
+	-webkit-transition:1s; /* Safari and Chrome */
+	-o-transition:1s;
+	transition-delay:0.4s;
+	-moz-transition-delay:0.4s;
+	-webkit-transition-delay:0.4s;
+	-o-transition-delay:0.4s;
 }
 
 
@@ -125,11 +129,15 @@ body{
 	height: 320px;
 }
 #button:hover .apb{
-	background-image: url("assets/images/atplus_green.png");
-	opacity: 1;
 	transform:scale(1.5,1.5);
 	-moz-transfrom:scale(1.5,1.5);
 	-webkit-transfrom:scale(1.5,1.5);
+	transition-delay:0s;
+	-moz-transition-delay:0s;
+	-webkit-transition-delay:0s;
+	-o-transition-delay:0s;
+	background-image: url("assets/images/atplus_green.png");
+	opacity: 1;
 }
 #button:hover .button{
 	background-color: gray;
