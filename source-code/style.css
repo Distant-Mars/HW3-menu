@@ -11,8 +11,9 @@ body{
 	position: absolute;
 	top: 205px;
 	left:120px;
-	height: 10px;
-	width: 10px;
+	height: 0px;
+	width: 0px;
+	background-color: gray;
 	transition:1s;
 	-moz-transition:1s;
 	-webkit-transition:1s;
@@ -46,19 +47,31 @@ body{
 }
 .mine{
 	margin:0 auto;
-	width: 0px;
+	width: 44%;
 	font-size: 0pt;
 	font-weight: bold;
-	transition:1s;
-	-moz-transition:1s; /* Firefox 4 */
-	-webkit-transition:1s; /* Safari and Chrome */
-	-o-transition:1s;
+	transition:1.5s;
+	-moz-transition:1.5s; /* Firefox 4 */
+	-webkit-transition:1.5s; /* Safari and Chrome */
+	-o-transition:1.5s;
+}
+.posted{
+	position: absolute;
+    top: 62%;
+    left: 3%;
+}
+.like{
+	position: absolute;
+    top: 62%;
+    left: 50%;
 }
 
 
 /*----------------这里设置多了一个会变大的空白块，这样在缝隙之间也不会关上菜单-------------------
 ------------------------------------------------------------------------------*/
 #button{
+	position: relative;
+	left:50px;
 	height: 0;
 	width:0;
 	border-radius: 40%;
@@ -82,6 +95,7 @@ body{
 	-o-transition:1s;
 }
 .unread{
+	opacity: 0;
 	display: block;
 	text-align: center;
 	position: relative;
@@ -92,10 +106,10 @@ body{
 	height: 0px;
 	font-size: 0pt;
 	color: white;
-	transition:1s;
-	-moz-transition:1s; /* Firefox 4 */
-	-webkit-transition:1s; /* Safari and Chrome */
-	-o-transition:1s;
+	transition:0s;
+	-moz-transition:0s; /* Firefox 4 */
+	-webkit-transition:0s; /* Safari and Chrome */
+	-o-transition:0s;
 }
 .apb{
 	position: absolute;
@@ -141,8 +155,8 @@ body{
 }
 #button:hover .button{
 	background-color: gray;
-	height: 44px;
-	width: 44px;
+	height: 40px;
+	width: 40px;
 	border-radius: 22px;
 	-moz-border-radius:22px;
 	-webkit-border-radius:22px;
@@ -169,6 +183,7 @@ body{
     left: 38px;
 }
 #button:hover .unread{
+	opacity: 1;
 	font-size: 14pt;
 	font-weight: bold;
 	top: -5px;
@@ -180,6 +195,10 @@ body{
 	border-radius: 12px;
 	-moz-border-radius:12px;
 	-webkit-border-radius:12px;
+	transition:1s;
+	-moz-transition:1s; /* Firefox 4 */
+	-webkit-transition:1s; /* Safari and Chrome */
+	-o-transition:1s;
 }
 #button:hover .setting{
 	background-image: url("assets/images/setting.png");
@@ -221,31 +240,12 @@ body{
 	vertical-align:top;
 	color: white;
 }
-#button:hover .posted{
-	position: absolute;
-	top:62%;
-	left: 3%;
-	width: 70px;
-}
-#button:hover .posted span{
+#button:hover .mine span{
 	font-size: 18pt;
 	vertical-align:top;
 	font-weight: bold;
 	color:rgb(33,217,147);
 }
-#button:hover .like{
-	position: absolute;
-	top:62%;
-	left: 50%;
-	width: 70px;
-}
-#button:hover .like span{
-	font-size: 18pt;
-	vertical-align:top;
-	font-weight: bold;
-	color:rgb(33,217,147);
-}
-
 /*----------------定位整个环形菜单到屏幕正下方-------------------
 -----------------------------------------------------------------*/
 #bottom-positioner{
